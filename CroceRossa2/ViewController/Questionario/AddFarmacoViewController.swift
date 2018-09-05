@@ -5,7 +5,6 @@
 //  Created by Admin_6150 on 24/07/18.
 //  Copyright © 2018 Informatica_4Binf. All rights reserved.
 //
-
 import UIKit
 
 class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -143,8 +142,7 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         let controller = storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
         present(controller, animated: true, completion: nil)
     }
-    
-    
+
     
     func checkCampi() -> Bool{
         var bool = true
