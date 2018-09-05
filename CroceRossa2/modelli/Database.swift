@@ -53,6 +53,7 @@ class Database{
         }
     }
     
+
     /*func register(cogn: NSString, nome: NSString, sesso: NSString){
         
         let insert = "INSERT INTO dati(nome, cognome, sesso) VALUES(?,?,?)"

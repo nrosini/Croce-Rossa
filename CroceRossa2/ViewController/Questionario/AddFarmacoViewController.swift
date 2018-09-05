@@ -17,17 +17,15 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var updateButton: UIButton!
     
-    
     static var farmaco = Farmaco()
     
     var giorniSettimana = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateButton.isHidden = true
         
-        if !AddFarmacoViewController.farmaco.getNome().elementsEqual("") {
-            updateButton.isHidden = false
+        if AddFarmacoViewController.farmaco.getNome().elementsEqual("") {
+            updateButton.isHidden = true
         }
         
         self.tableView.isScrollEnabled = false
@@ -51,6 +49,7 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
             fieldNome.text = AddFarmacoViewController.farmaco.getNome()
             fieldPrinicipio.text = AddFarmacoViewController.farmaco.getPrincipio()
         }
+    
     }
 
     override func didReceiveMemoryWarning() {

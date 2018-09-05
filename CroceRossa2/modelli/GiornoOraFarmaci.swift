@@ -197,7 +197,24 @@ class GiornoOraFarmaci{
         }
     }
 
-
+    func removeDoseOra(giorno: String, index: Int){
+        switch giorno {
+        case "Lunedì":
+            self.lunedì.remove(at: index)
+        case "Martedì":
+            self.martedì.remove(at: index)
+        case "Mercoledì":
+            self.mercoledì.remove(at: index)
+        case "Giovedì":
+            self.giovedì.remove(at: index)
+        case "Venerdì":
+            self.venerdì.remove(at: index)
+        case "Sabato":
+            self.sabato.remove(at: index)
+        default:
+            self.domenica.remove(at: index)
+        }
+    }
 }
 
 class DoseOra{

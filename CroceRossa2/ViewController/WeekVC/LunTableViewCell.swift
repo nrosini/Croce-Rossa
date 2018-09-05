@@ -19,9 +19,13 @@ class LunTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectio
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        collectionView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(longTap)))
+        
+        
         self.collectionView.register(UINib.init(nibName: "LunCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cellLun")
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadCollection), name: NSNotification.Name("loadCollection"), object: nil)
+        
         
         labelGiorno.text = "LUN"
     }
@@ -40,7 +44,40 @@ class LunTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectio
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
+
+    @objc func longTap(sender: UILongPressGestureRecognizer){
+        print("tapped")
+        
+        if let indexPath = self.collectionView?.indexPathForItem(at: sender.location(in: self.collectionView)) {
+            print("you can do something with the cell or index path here ")
+            print(indexPath.item)
+            
+            let cell = collectionView.cellForItem(at: indexPath) as! LunCollectionViewCell
+            cell.wobble()
+            cell.backgroundColor = UIColor.darkGray
+            
+            let alert = UIAlertController(title: "Elimina Orario", message: "Vuoi veramente eliminare l'orario selezionato?", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Elimina", style: .default, handler: {(action: UIAlertAction!) in
+                AddFarmacoViewController.farmaco.getGiornoOra().removeDoseOra(giorno: "Lunedì", index: indexPath.item)
+                self.collectionView.reloadData()
+            })
+            let alertActionCancel = UIAlertAction(title: "Annulla", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
+            alert.addAction(alertActionCancel)
+            
+            //self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            //self.window?.rootViewController?.view.addSubview(alert.view)
+            
+        } else {
+            print("collection view was tapped")
+        }
+    }
+    
     @objc func loadCollection(){
         collectionView.reloadData()
     }
+
 }
