@@ -10,6 +10,9 @@ import UIKit
 
 class FarmaciQuestTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelNome: UILabel!
+    @IBOutlet weak var labelPrinicipio: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +23,9 @@ class FarmaciQuestTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func initLabel(nome: String, principio: String) {
+        labelNome.text = nome
+        labelPrinicipio.text = principio
+    }
 }

@@ -43,8 +43,16 @@ class Farmaco{
         return self.nome
     }
     
+    func setNome(nome: String) {
+        self.nome = nome
+    }
+    
     func getPrincipio() -> String {
         return self.principio
+    }
+    
+    func setPrinicipio(principio: String) {
+        self.principio = principio
     }
     
     func getGiornoOra() -> GiornoOraFarmaci {

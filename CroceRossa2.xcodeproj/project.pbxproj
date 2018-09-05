@@ -19,6 +19,23 @@
 		63B99981208DF69D0063C83F /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B99980208DF69D0063C83F /* QuestViewController.swift */; };
 		63B99983208DF71C0063C83F /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B99982208DF71C0063C83F /* RegViewController.swift */; };
 		63D77F0120A0689B00A3D25E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D77F0020A0689B00A3D25E /* Database.swift */; };
+		AFFFE681213E69D400BD49BF /* LunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE67F213E69D400BD49BF /* LunTableViewCell.swift */; };
+		AFFFE682213E69D400BD49BF /* LunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE680213E69D400BD49BF /* LunTableViewCell.xib */; };
+		AFFFE685213E69E800BD49BF /* MarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE683213E69E800BD49BF /* MarTableViewCell.swift */; };
+		AFFFE686213E69E800BD49BF /* MarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE684213E69E800BD49BF /* MarTableViewCell.xib */; };
+		AFFFE689213E69FB00BD49BF /* MerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE687213E69FB00BD49BF /* MerTableViewCell.swift */; };
+		AFFFE68A213E69FB00BD49BF /* MerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE688213E69FB00BD49BF /* MerTableViewCell.xib */; };
+		AFFFE68D213E6A0D00BD49BF /* GioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE68B213E6A0D00BD49BF /* GioTableViewCell.swift */; };
+		AFFFE68E213E6A0D00BD49BF /* GioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE68C213E6A0D00BD49BF /* GioTableViewCell.xib */; };
+		AFFFE691213E6A2000BD49BF /* VenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE68F213E6A2000BD49BF /* VenTableViewCell.swift */; };
+		AFFFE692213E6A2000BD49BF /* VenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE690213E6A2000BD49BF /* VenTableViewCell.xib */; };
+		AFFFE695213E6A3000BD49BF /* SabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE693213E6A3000BD49BF /* SabTableViewCell.swift */; };
+		AFFFE696213E6A3000BD49BF /* SabTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE694213E6A3000BD49BF /* SabTableViewCell.xib */; };
+		AFFFE699213E6A4000BD49BF /* DomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE697213E6A4000BD49BF /* DomTableViewCell.swift */; };
+		AFFFE69A213E6A4000BD49BF /* DomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE698213E6A4000BD49BF /* DomTableViewCell.xib */; };
+		AFFFE6D8213E965400BD49BF /* LunCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE6D6213E965400BD49BF /* LunCollectionViewCell.swift */; };
+		AFFFE6D9213E965400BD49BF /* LunCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE6D7213E965400BD49BF /* LunCollectionViewCell.xib */; };
+		AFFFE6DB213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE6DA213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift */; };
 		FD16D7102106242E00F9D3E5 /* PopUpAllergieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16D70F2106242E00F9D3E5 /* PopUpAllergieViewController.swift */; };
 		FD16D7122106245F00F9D3E5 /* AllergiePopUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16D7112106245F00F9D3E5 /* AllergiePopUpTableViewController.swift */; };
 		FD2FBE1B210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FBE1A210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift */; };
@@ -48,6 +65,23 @@
 		63B99980208DF69D0063C83F /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		63B99982208DF71C0063C83F /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		63D77F0020A0689B00A3D25E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		AFFFE67F213E69D400BD49BF /* LunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE680213E69D400BD49BF /* LunTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LunTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE683213E69E800BD49BF /* MarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE684213E69E800BD49BF /* MarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE687213E69FB00BD49BF /* MerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE688213E69FB00BD49BF /* MerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MerTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE68B213E6A0D00BD49BF /* GioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GioTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE68C213E6A0D00BD49BF /* GioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GioTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE68F213E6A2000BD49BF /* VenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE690213E6A2000BD49BF /* VenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE693213E6A3000BD49BF /* SabTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SabTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE694213E6A3000BD49BF /* SabTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SabTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE697213E6A4000BD49BF /* DomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomTableViewCell.swift; sourceTree = "<group>"; };
+		AFFFE698213E6A4000BD49BF /* DomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DomTableViewCell.xib; sourceTree = "<group>"; };
+		AFFFE6D6213E965400BD49BF /* LunCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFFFE6D7213E965400BD49BF /* LunCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LunCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFFFE6DA213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmaciQuestTableViewCell.swift; sourceTree = "<group>"; };
 		FD16D70F2106242E00F9D3E5 /* PopUpAllergieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAllergieViewController.swift; sourceTree = "<group>"; };
 		FD16D7112106245F00F9D3E5 /* AllergiePopUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiePopUpTableViewController.swift; sourceTree = "<group>"; };
 		FD2FBE1A210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrarioFarmaciCustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +149,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AFFFE67E213E68DC00BD49BF /* WeekVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFFFE67F213E69D400BD49BF /* LunTableViewCell.swift */,
+				AFFFE680213E69D400BD49BF /* LunTableViewCell.xib */,
+				AFFFE683213E69E800BD49BF /* MarTableViewCell.swift */,
+				AFFFE684213E69E800BD49BF /* MarTableViewCell.xib */,
+				AFFFE687213E69FB00BD49BF /* MerTableViewCell.swift */,
+				AFFFE688213E69FB00BD49BF /* MerTableViewCell.xib */,
+				AFFFE68B213E6A0D00BD49BF /* GioTableViewCell.swift */,
+				AFFFE68C213E6A0D00BD49BF /* GioTableViewCell.xib */,
+				AFFFE68F213E6A2000BD49BF /* VenTableViewCell.swift */,
+				AFFFE690213E6A2000BD49BF /* VenTableViewCell.xib */,
+				AFFFE693213E6A3000BD49BF /* SabTableViewCell.swift */,
+				AFFFE694213E6A3000BD49BF /* SabTableViewCell.xib */,
+				AFFFE697213E6A4000BD49BF /* DomTableViewCell.swift */,
+				AFFFE698213E6A4000BD49BF /* DomTableViewCell.xib */,
+			);
+			path = WeekVC;
+			sourceTree = "<group>";
+		};
+		AFFFE6D5213E962100BD49BF /* CelleCV */ = {
+			isa = PBXGroup;
+			children = (
+				AFFFE6D6213E965400BD49BF /* LunCollectionViewCell.swift */,
+				AFFFE6D7213E965400BD49BF /* LunCollectionViewCell.xib */,
+			);
+			path = CelleCV;
+			sourceTree = "<group>";
+		};
 		FD16D70E210623E200F9D3E5 /* PopUpVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +201,7 @@
 				FD46B9F8210798100046F7DC /* AddFarmacoViewController.swift */,
 				FD46B9FA21079A330046F7DC /* CalendarioFarmaciCustomCell.swift */,
 				FD2FBE1A210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift */,
+				AFFFE6DA213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift */,
 			);
 			path = Questionario;
 			sourceTree = "<group>";
@@ -155,6 +220,8 @@
 		FDA9ED432101792D008CB9FC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AFFFE6D5213E962100BD49BF /* CelleCV */,
+				AFFFE67E213E68DC00BD49BF /* WeekVC */,
 				FD16D719210690D300F9D3E5 /* Questionario */,
 				6316BFB6208870510083669A /* ViewController.swift */,
 				63B99982208DF71C0063C83F /* RegViewController.swift */,
@@ -224,8 +291,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6316BFBF208870510083669A /* LaunchScreen.storyboard in Resources */,
+				AFFFE692213E6A2000BD49BF /* VenTableViewCell.xib in Resources */,
+				AFFFE68E213E6A0D00BD49BF /* GioTableViewCell.xib in Resources */,
 				6316BFBC208870510083669A /* Assets.xcassets in Resources */,
+				AFFFE69A213E6A4000BD49BF /* DomTableViewCell.xib in Resources */,
+				AFFFE6D9213E965400BD49BF /* LunCollectionViewCell.xib in Resources */,
+				AFFFE686213E69E800BD49BF /* MarTableViewCell.xib in Resources */,
 				6316BFBA208870510083669A /* Main.storyboard in Resources */,
+				AFFFE68A213E69FB00BD49BF /* MerTableViewCell.xib in Resources */,
+				AFFFE696213E6A3000BD49BF /* SabTableViewCell.xib in Resources */,
+				AFFFE682213E69D400BD49BF /* LunTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,19 +313,28 @@
 			files = (
 				FD2FBE1B210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift in Sources */,
 				FD940BE620F7E9F90047D227 /* PopUpMalattieViewController.swift in Sources */,
+				AFFFE6DB213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift in Sources */,
+				AFFFE689213E69FB00BD49BF /* MerTableViewCell.swift in Sources */,
 				FD46BA012107C2E40046F7DC /* Farmaco.swift in Sources */,
 				6360752D2088A6EC00791FBC /* modello.swift in Sources */,
 				63B99983208DF71C0063C83F /* RegViewController.swift in Sources */,
+				AFFFE695213E6A3000BD49BF /* SabTableViewCell.swift in Sources */,
 				FD3CDF3C210A862000C031A8 /* GiornoOraFarmaci.swift in Sources */,
 				FD431D0F2105F157004BCA51 /* PopUpInterventiSubitiViewController.swift in Sources */,
 				FD16D7102106242E00F9D3E5 /* PopUpAllergieViewController.swift in Sources */,
 				FDCAF41820FB7CCA00E41755 /* MalattiePopUpTableViewController.swift in Sources */,
+				AFFFE6D8213E965400BD49BF /* LunCollectionViewCell.swift in Sources */,
 				6316BFB7208870510083669A /* ViewController.swift in Sources */,
+				AFFFE699213E6A4000BD49BF /* DomTableViewCell.swift in Sources */,
 				63B99981208DF69D0063C83F /* QuestViewController.swift in Sources */,
+				AFFFE681213E69D400BD49BF /* LunTableViewCell.swift in Sources */,
+				AFFFE691213E6A2000BD49BF /* VenTableViewCell.swift in Sources */,
 				FD46B9F9210798100046F7DC /* AddFarmacoViewController.swift in Sources */,
 				FD16D7122106245F00F9D3E5 /* AllergiePopUpTableViewController.swift in Sources */,
+				AFFFE68D213E6A0D00BD49BF /* GioTableViewCell.swift in Sources */,
 				FD46B9FB21079A330046F7DC /* CalendarioFarmaciCustomCell.swift in Sources */,
 				FD46B9FD2107A7500046F7DC /* PopUpAddFarmacoViewController.swift in Sources */,
+				AFFFE685213E69E800BD49BF /* MarTableViewCell.swift in Sources */,
 				6316BFB5208870500083669A /* AppDelegate.swift in Sources */,
 				63D77F0120A0689B00A3D25E /* Database.swift in Sources */,
 				FD431D112105F2F1004BCA51 /* InterventiSubitiPopUpTableViewController.swift in Sources */,

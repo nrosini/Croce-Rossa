@@ -10,9 +10,14 @@ import UIKit
 
 class LunCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var labelDose: UILabel!
+    
+    @IBOutlet weak var labelOrario: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.layer.cornerRadius = 20
     }
 
 }

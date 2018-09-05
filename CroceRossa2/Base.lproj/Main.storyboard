@@ -412,7 +412,7 @@
         <!--Quest View Controller-->
         <scene sceneID="VUr-FR-Epd">
             <objects>
-                <viewController id="YzX-Py-Oln" customClass="QuestViewController" customModule="CroceRossa2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Questionario" id="YzX-Py-Oln" customClass="QuestViewController" customModule="CroceRossa2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="86Y-JW-gkL">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -555,6 +555,40 @@
                                 <rect key="frame" x="11" y="592" width="803" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellFarmaciQuest" rowHeight="55" id="vNz-do-BSu" customClass="FarmaciQuestTableViewCell" customModule="CroceRossa2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="803" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vNz-do-BSu" id="OPs-fe-YF3">
+                                            <rect key="frame" x="0.0" y="0.0" width="803" height="54.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXK-G2-CCA">
+                                                    <rect key="frame" x="15" y="12" width="357" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6b-85-5gp">
+                                                    <rect key="frame" x="380" y="17" width="319" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelNome" destination="IXK-G2-CCA" id="6Yf-Zj-e3Q"/>
+                                            <outlet property="labelPrinicipio" destination="B6b-85-5gp" id="2eH-As-yAo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YzX-Py-Oln" id="yAv-Oc-xxI"/>
+                                    <outlet property="delegate" destination="YzX-Py-Oln" id="HOt-6o-WJM"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Esami da fare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-sk-nz5">
                                 <rect key="frame" x="16" y="776" width="116" height="24"/>
@@ -590,6 +624,7 @@
                         <outlet property="labelAllergie" destination="I1g-dg-sA1" id="WBm-SX-lyh"/>
                         <outlet property="labelInterventi" destination="u9L-7Q-76h" id="ctU-sR-eNE"/>
                         <outlet property="labelMalattie" destination="jaz-lG-W0V" id="IAk-Mz-AV7"/>
+                        <outlet property="tableViewFarmaci" destination="Esl-Wc-u86" id="1bS-td-m2c"/>
                         <outlet property="textField" destination="dnR-xl-ZRd" id="E0N-Dc-5Zg"/>
                     </connections>
                 </viewController>
@@ -831,7 +866,7 @@
         <!--Add Farmaco View Controller-->
         <scene sceneID="3Of-rF-TC4">
             <objects>
-                <viewController id="Zzj-jG-SMe" customClass="AddFarmacoViewController" customModule="CroceRossa2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addFarmacoVCID" id="Zzj-jG-SMe" customClass="AddFarmacoViewController" customModule="CroceRossa2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y7q-ei-Bi3">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -865,10 +900,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nux-KN-ecP">
-                                <rect key="frame" x="287" y="1038" width="261" height="54"/>
+                                <rect key="frame" x="296" y="1038" width="261" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Inserisci Farmaco"/>
+                                <connections>
+                                    <action selector="insertButton:" destination="Zzj-jG-SMe" eventType="touchUpInside" id="OEv-2R-Ddx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imposta gli orari per il medicinale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83L-at-ILM">
                                 <rect key="frame" x="20" y="334" width="283" height="24"/>
@@ -882,83 +920,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Indietro"/>
                                 <connections>
-                                    <segue destination="YzX-Py-Oln" kind="presentation" id="U9b-Gl-IsO"/>
+                                    <action selector="backButton:" destination="Zzj-jG-SMe" eventType="touchUpInside" id="aeY-UD-YPK"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vel-ru-CXD">
                                 <rect key="frame" x="20" y="366" width="794" height="630"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellaOrarioMedicine" rowHeight="90" id="2rY-GS-jaX" customClass="CalendarioFarmaciCustomCell" customModule="CroceRossa2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="794" height="90"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2rY-GS-jaX" id="rFa-51-U9X">
-                                            <rect key="frame" x="0.0" y="0.0" width="794" height="89.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOM" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5l-bP-bF8">
-                                                    <rect key="frame" x="15" y="26" width="71" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus_button" translatesAutoresizingMaskIntoConstraints="NO" id="2rT-6a-4jN">
-                                                    <rect key="frame" x="749" y="29" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lip-3q-E8d">
-                                                    <rect key="frame" x="94" y="0.0" width="647" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oi4-It-Bf6">
-                                                        <size key="itemSize" width="90" height="50"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellaCollectionView" id="uZO-jC-RsL" customClass="OrarioFarmaciCustomCollectionViewCell" customModule="CroceRossa2" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHM-if-N29">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" red="0.32642895490000001" green="0.95686274510000002" blue="0.32917979679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    </view>
-                                                                </subviews>
-                                                            </view>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="Zzj-jG-SMe" id="H8O-fT-WRL"/>
-                                                        <outlet property="delegate" destination="Zzj-jG-SMe" id="uYB-5H-ixi"/>
-                                                    </connections>
-                                                </collectionView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="collectionView" destination="Lip-3q-E8d" id="XMI-5i-jVB"/>
-                                            <outlet property="labelGiornoSettimana" destination="q5l-bP-bF8" id="7Vv-o0-FyO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Zzj-jG-SMe" id="F8t-uY-rB3"/>
                                     <outlet property="delegate" destination="Zzj-jG-SMe" id="O1b-zX-5Uu"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zH-bG-Twt">
+                                <rect key="frame" x="20" y="1038" width="102" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Aggiorna"/>
+                                <connections>
+                                    <action selector="buttonUpdate:" destination="Zzj-jG-SMe" eventType="touchUpInside" id="NvY-hQ-EBd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jVu-EY-9si"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Vel-ru-CXD" id="scK-p7-WXR"/>
+                        <outlet property="fieldNome" destination="Sgz-iX-Lie" id="Waq-hA-Zx7"/>
+                        <outlet property="fieldPrinicipio" destination="NEs-Gt-q96" id="6Ri-Y9-ZI5"/>
+                        <outlet property="tableView" destination="Vel-ru-CXD" id="cQL-p9-bjT"/>
+                        <outlet property="updateButton" destination="8zH-bG-Twt" id="q3M-N4-R9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2c-Lr-rKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1031,8 +1022,19 @@
                                         </date>
                                         <locale key="locale" localeIdentifier="it"/>
                                     </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-4k-1kt">
+                                        <rect key="frame" x="64" y="459" width="57" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Annulla"/>
+                                        <connections>
+                                            <action selector="annulla:" destination="zJq-Bf-SCB" eventType="touchUpInside" id="n7L-hY-CZy"/>
+                                            <action selector="closePopUpMalattie:" destination="zJq-Bf-SCB" eventType="touchUpInside" id="45o-WV-HKr"/>
+                                            <action selector="closePopUpMalattie:" destination="JPa-WY-pUK" eventType="touchUpInside" id="EuB-cE-zOX"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHM-dn-aVp">
-                                        <rect key="frame" x="169" y="459" width="62" height="33"/>
+                                        <rect key="frame" x="274" y="459" width="62" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Imposta"/>
@@ -1062,10 +1064,8 @@
     </scenes>
     <resources>
         <image name="1" width="250" height="250"/>
-        <image name="plus_button" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G7l-fJ-Fvw"/>
         <segue reference="AgF-3Q-F6X"/>
         <segue reference="4LA-fU-J2t"/>
     </inferredMetricsTieBreakers>

@@ -18,6 +18,8 @@ class PopUpAddFarmacoViewController: UIViewController {
     
     static var dayOfWeek : String = ""
     
+    var annulla: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         popUpView.layer.cornerRadius = 20
@@ -36,10 +38,9 @@ class PopUpAddFarmacoViewController: UIViewController {
         if self.checkCampi(){
             self.removeAnimate()
             self.passData()
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadCollection"), object: nil)
-            AddFarmacoViewController.indexRow = 0
-        }else{
+        }else if !annulla{
             
             let alert = UIAlertController(title: "Immissione dei campi non completa", message: "riempire il campo descrivente la quantità di dose medicinale", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -48,6 +49,11 @@ class PopUpAddFarmacoViewController: UIViewController {
             
             self.fieldDose.becomeFirstResponder()
         }
+    }
+    
+    @IBAction func annulla(_ sender: Any) {
+        self.removeAnimate()
+        annulla = true
     }
     
     func showAnimate()
