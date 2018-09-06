@@ -15,6 +15,7 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var fieldPrinicipio: UITextField!
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var updateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     static var farmaco = Farmaco()
     
@@ -25,6 +26,7 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if AddFarmacoViewController.farmaco.getNome().elementsEqual("") {
             updateButton.isHidden = true
+            deleteButton.isHidden = true
         }
         
         self.tableView.isScrollEnabled = false
@@ -133,6 +135,30 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
         present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func buttonDelete(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Elimina Farmaco", message: "Vuoi veramente eliminare quest'orario?", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Elimina", style: .destructive, handler: {(action: UIAlertAction!) in
+            AddFarmacoViewController.farmaco = Farmaco()
+            Database.farmaci.remove(at: AddFarmacoViewController.indexRow)
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
+            self.present(controller, animated: true, completion: nil)
+        })
+        let alertActionCancel = UIAlertAction(title: "Annulla", style: .cancel, handler: nil)
+        alert.addAction(alertAction)
+        alert.addAction(alertActionCancel)
+        
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            if ((sender as AnyObject).state == .began){
+                topController.present(alert, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     

@@ -107,4 +107,11 @@ class QuestViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            Database.farmaci.remove(at: indexPath.item)
+            tableViewFarmaci.reloadData()
+        }
+    }
+    
 }
