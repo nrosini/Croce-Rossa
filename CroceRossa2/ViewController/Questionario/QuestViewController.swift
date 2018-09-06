@@ -30,6 +30,8 @@ class QuestViewController: UIViewController, UITableViewDelegate, UITableViewDat
         NotificationCenter.default.addObserver(self, selector: #selector(interventiField), name: NSNotification.Name("loadInterventi"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(allergieField), name: NSNotification.Name("loadAllergie"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showPopUpEsame), name: NSNotification.Name("popUpEsame"), object: nil)
     }
     
     
@@ -54,7 +56,16 @@ class QuestViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
     }
-  
+    
+    @IBAction func showPopUpEsami(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpAddEsameID") as! PopUpAddEsameViewController;
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
+    
     @objc func malattieField(){
         if Database.malattie.isEmpty{
             labelMalattie.text = "Nessuna malattia selezionata"
@@ -81,6 +92,14 @@ class QuestViewController: UIViewController, UITableViewDelegate, UITableViewDat
         else {
             labelAllergie.text = Database.allergie.joined(separator: ", ")
         }
+    }
+    
+    @objc func showPopUpEsame(){
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUpAddEsameID") as! PopUpAddEsameViewController;
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

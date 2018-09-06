@@ -160,14 +160,6 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
     }
-    
-    
-    @IBAction func backButton(_ sender: Any) {
-        AddFarmacoViewController.farmaco = Farmaco()
-        
-        let controller = storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
-        present(controller, animated: true, completion: nil)
-    }
 
     
     func checkCampi() -> Bool{

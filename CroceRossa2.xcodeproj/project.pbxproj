@@ -19,6 +19,10 @@
 		63B99981208DF69D0063C83F /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B99980208DF69D0063C83F /* QuestViewController.swift */; };
 		63B99983208DF71C0063C83F /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B99982208DF71C0063C83F /* RegViewController.swift */; };
 		63D77F0120A0689B00A3D25E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D77F0020A0689B00A3D25E /* Database.swift */; };
+		AF509B2D21411C9B00CA3E53 /* PopUpAddEsameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF509B2C21411C9B00CA3E53 /* PopUpAddEsameViewController.swift */; };
+		AF509B2F21411D9B00CA3E53 /* Esami.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF509B2E21411D9B00CA3E53 /* Esami.swift */; };
+		AF509B312141291800CA3E53 /* EsamiQuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF509B302141291800CA3E53 /* EsamiQuestTableViewCell.swift */; };
+		AF509B332141302000CA3E53 /* QuestEsamiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF509B322141302000CA3E53 /* QuestEsamiTableViewController.swift */; };
 		AFFFE681213E69D400BD49BF /* LunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE67F213E69D400BD49BF /* LunTableViewCell.swift */; };
 		AFFFE682213E69D400BD49BF /* LunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFFE680213E69D400BD49BF /* LunTableViewCell.xib */; };
 		AFFFE685213E69E800BD49BF /* MarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFFE683213E69E800BD49BF /* MarTableViewCell.swift */; };
@@ -65,6 +69,10 @@
 		63B99980208DF69D0063C83F /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
 		63B99982208DF71C0063C83F /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		63D77F0020A0689B00A3D25E /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		AF509B2C21411C9B00CA3E53 /* PopUpAddEsameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAddEsameViewController.swift; sourceTree = "<group>"; };
+		AF509B2E21411D9B00CA3E53 /* Esami.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esami.swift; sourceTree = "<group>"; };
+		AF509B302141291800CA3E53 /* EsamiQuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsamiQuestTableViewCell.swift; sourceTree = "<group>"; };
+		AF509B322141302000CA3E53 /* QuestEsamiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestEsamiTableViewController.swift; sourceTree = "<group>"; };
 		AFFFE67F213E69D400BD49BF /* LunTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunTableViewCell.swift; sourceTree = "<group>"; };
 		AFFFE680213E69D400BD49BF /* LunTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LunTableViewCell.xib; sourceTree = "<group>"; };
 		AFFFE683213E69E800BD49BF /* MarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +197,7 @@
 				FD16D70F2106242E00F9D3E5 /* PopUpAllergieViewController.swift */,
 				FD16D7112106245F00F9D3E5 /* AllergiePopUpTableViewController.swift */,
 				FD46B9FC2107A7500046F7DC /* PopUpAddFarmacoViewController.swift */,
+				AF509B2C21411C9B00CA3E53 /* PopUpAddEsameViewController.swift */,
 			);
 			path = PopUpVC;
 			sourceTree = "<group>";
@@ -202,6 +211,8 @@
 				FD46B9FA21079A330046F7DC /* CalendarioFarmaciCustomCell.swift */,
 				FD2FBE1A210B2904002593E3 /* OrarioFarmaciCustomCollectionViewCell.swift */,
 				AFFFE6DA213EDC8300BD49BF /* FarmaciQuestTableViewCell.swift */,
+				AF509B302141291800CA3E53 /* EsamiQuestTableViewCell.swift */,
+				AF509B322141302000CA3E53 /* QuestEsamiTableViewController.swift */,
 			);
 			path = Questionario;
 			sourceTree = "<group>";
@@ -213,6 +224,7 @@
 				6360752C2088A6EC00791FBC /* modello.swift */,
 				FD46BA002107C2E40046F7DC /* Farmaco.swift */,
 				FD3CDF3B210A862000C031A8 /* GiornoOraFarmaci.swift */,
+				AF509B2E21411D9B00CA3E53 /* Esami.swift */,
 			);
 			path = modelli;
 			sourceTree = "<group>";
@@ -324,13 +336,16 @@
 				FD16D7102106242E00F9D3E5 /* PopUpAllergieViewController.swift in Sources */,
 				FDCAF41820FB7CCA00E41755 /* MalattiePopUpTableViewController.swift in Sources */,
 				AFFFE6D8213E965400BD49BF /* LunCollectionViewCell.swift in Sources */,
+				AF509B2D21411C9B00CA3E53 /* PopUpAddEsameViewController.swift in Sources */,
 				6316BFB7208870510083669A /* ViewController.swift in Sources */,
+				AF509B312141291800CA3E53 /* EsamiQuestTableViewCell.swift in Sources */,
 				AFFFE699213E6A4000BD49BF /* DomTableViewCell.swift in Sources */,
 				63B99981208DF69D0063C83F /* QuestViewController.swift in Sources */,
 				AFFFE681213E69D400BD49BF /* LunTableViewCell.swift in Sources */,
 				AFFFE691213E6A2000BD49BF /* VenTableViewCell.swift in Sources */,
 				FD46B9F9210798100046F7DC /* AddFarmacoViewController.swift in Sources */,
 				FD16D7122106245F00F9D3E5 /* AllergiePopUpTableViewController.swift in Sources */,
+				AF509B332141302000CA3E53 /* QuestEsamiTableViewController.swift in Sources */,
 				AFFFE68D213E6A0D00BD49BF /* GioTableViewCell.swift in Sources */,
 				FD46B9FB21079A330046F7DC /* CalendarioFarmaciCustomCell.swift in Sources */,
 				FD46B9FD2107A7500046F7DC /* PopUpAddFarmacoViewController.swift in Sources */,
@@ -339,6 +354,7 @@
 				63D77F0120A0689B00A3D25E /* Database.swift in Sources */,
 				FD431D112105F2F1004BCA51 /* InterventiSubitiPopUpTableViewController.swift in Sources */,
 				6316BFD120887FAA0083669A /* HomeViewController.swift in Sources */,
+				AF509B2F21411D9B00CA3E53 /* Esami.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

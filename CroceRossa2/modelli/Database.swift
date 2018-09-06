@@ -17,6 +17,7 @@ class Database{
     static var interventiChirurgici: [String] = []
     static var allergie: [String] = []
     static var farmaci: [Farmaco] = [Farmaco]()
+    static var esami: [Esame] = [Esame]()
     
     //costruttore con connessione al db
     init(){

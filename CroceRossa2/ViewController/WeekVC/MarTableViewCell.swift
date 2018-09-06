@@ -19,6 +19,7 @@ class MarTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectio
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
+        collectionView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(longTap)))
         self.collectionView.register(UINib.init(nibName: "LunCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cellLun")
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadCollection), name: NSNotification.Name("loadCollection"), object: nil)
@@ -42,6 +43,40 @@ class MarTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectio
     
     @objc func loadCollection(){
         collectionView.reloadData()
+    }
+    
+    @objc func longTap(sender: UILongPressGestureRecognizer){
+        
+        if let indexPath = self.collectionView?.indexPathForItem(at: sender.location(in: self.collectionView)) {
+            
+            let cell = collectionView.cellForItem(at: indexPath) as! LunCollectionViewCell
+            cell.wobble()
+            
+            let alert = UIAlertController(title: "Elimina Orario", message: "Vuoi veramente eliminare l'orario selezionato?", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Elimina", style: .destructive, handler: {(action: UIAlertAction!) in
+                AddFarmacoViewController.farmaco.getGiornoOra().removeDoseOra(giorno: "Martedì", index: indexPath.item)
+                self.collectionView.reloadData()
+            })
+            let alertActionCancel = UIAlertAction(title: "Annulla", style: .cancel, handler: {(action: UIAlertAction!) in
+                cell.stopWobble()
+                self.collectionView.reloadData()
+            })
+            alert.addAction(alertAction)
+            alert.addAction(alertActionCancel)
+            
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                if (sender.state == .began){
+                    topController.present(alert, animated: true, completion: nil)
+                    print("tapped")
+                }
+            }
+            
+        } else {
+            print("collection view was tapped")
+        }
     }
     
 }

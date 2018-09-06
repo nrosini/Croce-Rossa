@@ -22,6 +22,7 @@ class GiornoOraFarmaci{
     private var sabato : [DoseOra] = [DoseOra]()
     private var domenica : [DoseOra] = [DoseOra]()
     
+    
     init(giorno: String, dose: String, ora: String) {
         
         switch giorno {
