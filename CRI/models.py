@@ -42,7 +42,7 @@ class Utente(models.Model):
 class Farmaco(models.Model):
 
     id = int
-    user_id = int
+    utente_id = int
 
     nome = models.CharField(max_length=50)
     principio = models.CharField(max_length=50)
