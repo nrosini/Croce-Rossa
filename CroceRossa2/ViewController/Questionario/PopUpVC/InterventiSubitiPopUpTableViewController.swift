@@ -10,7 +10,7 @@ import UIKit
 
 class InterventiSubitiPopUpTableViewController: UITableViewController {
 
-    var interventi = ["Appendicite", "Trapianto", "Intervento al osso", "Piede monco", "Gianni Mario Fiorucci"]
+    var interventi = ["Appendicite", "Trapianto", "Intervento al osso", "Piede monco", "Gianni Mario"]
     var interventiSelezionati : [String] = []
     
     override func viewDidLoad() {

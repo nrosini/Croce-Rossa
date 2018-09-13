@@ -89,6 +89,14 @@ class PopUpAddEsameViewController: UIViewController {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadTableEsami"), object: nil)
             
             self.removeAnimate()
+        }else{
+            
+            let alert = UIAlertController(title: "Immissione dei campi non completa", message: "riempire il campo descrivente il nome del esame", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
+            self.present(alert, animated: true, completion: nil)
+            
+            self.fieldNome.becomeFirstResponder()
         }
     }
     

@@ -106,9 +106,14 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         if self.checkCampi(){
             AddFarmacoViewController.farmaco.setNome(nome: fieldNome.text!)
             AddFarmacoViewController.farmaco.setPrinicipio(principio: fieldPrinicipio.text!)
-            Database.farmaci.append(AddFarmacoViewController.farmaco)
+            
+            Database.farmaci.append(Farmaco(old: AddFarmacoViewController.farmaco))
             
             AddFarmacoViewController.farmaco = Farmaco()
+            
+            for far in Database.farmaci{
+                print(far.getNome())
+            }
             
             let controller = storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
             present(controller, animated: true, completion: nil)
@@ -132,6 +137,8 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         AddFarmacoViewController.farmaco.setPrinicipio(principio: fieldPrinicipio.text!)
         
         Database.farmaci[AddFarmacoViewController.indexRow] = AddFarmacoViewController.farmaco
+        
+        AddFarmacoViewController.farmaco = Farmaco()
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "Questionario") as! QuestViewController
         present(controller, animated: true, completion: nil)

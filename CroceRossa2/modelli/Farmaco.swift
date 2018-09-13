@@ -14,16 +14,13 @@ class Farmaco{
     private var principio : String = ""
     private var giornoOra : GiornoOraFarmaci = GiornoOraFarmaci()
     
-    /*init(nome: String, principio: String, dose: String, data: Date, hour: Date){
-        
-        self.nome = nome
-        self.principio = principio
-        self.dose = dose
-        self.data = data
-        self.hour = hour
-    }*/
+    init(){
+    }
     
-    init() {
+    init(old: Farmaco) {
+        self.nome = old.getNome()
+        self.principio = old.getPrincipio()
+        self.giornoOra = old.getGiornoOra()
     }
     
     func addGiornoOra(orario: Date, giorno: String, dose: String){
@@ -58,6 +55,4 @@ class Farmaco{
     func getGiornoOra() -> GiornoOraFarmaci {
         return self.giornoOra
     }
-    
-
 }

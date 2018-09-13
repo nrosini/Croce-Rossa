@@ -115,14 +115,13 @@ class QuestViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         AddFarmacoViewController.farmaco = Database.farmaci[indexPath.item]
         
+        AddFarmacoViewController.indexRow = indexPath.item
+        
         let controller = storyboard?.instantiateViewController(withIdentifier: "addFarmacoVCID") as! AddFarmacoViewController
         present(controller, animated: true, completion: nil)
-        
-        AddFarmacoViewController.indexRow = indexPath.item
         
     }
     
