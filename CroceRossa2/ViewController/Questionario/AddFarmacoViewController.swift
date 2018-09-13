@@ -16,6 +16,7 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
     
     static var farmaco = Farmaco()
     
@@ -27,6 +28,8 @@ class AddFarmacoViewController: UIViewController, UITableViewDelegate, UITableVi
         if AddFarmacoViewController.farmaco.getNome().elementsEqual("") {
             updateButton.isHidden = true
             deleteButton.isHidden = true
+        } else {
+            addButton.isHidden = true
         }
         
         self.tableView.isScrollEnabled = false

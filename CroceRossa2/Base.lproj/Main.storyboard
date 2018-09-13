@@ -1174,6 +1174,7 @@
                         <viewLayoutGuide key="safeArea" id="jVu-EY-9si"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Nux-KN-ecP" id="uB9-J4-aL3"/>
                         <outlet property="deleteButton" destination="cwO-i9-KQf" id="hZb-iR-XiR"/>
                         <outlet property="fieldNome" destination="Sgz-iX-Lie" id="Waq-hA-Zx7"/>
                         <outlet property="fieldPrinicipio" destination="NEs-Gt-q96" id="6Ri-Y9-ZI5"/>
@@ -1295,7 +1296,7 @@
         <image name="1" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t6n-9E-x7C"/>
+        <segue reference="nX4-eR-CpX"/>
         <segue reference="AgF-3Q-F6X"/>
         <segue reference="4LA-fU-J2t"/>
     </inferredMetricsTieBreakers>
