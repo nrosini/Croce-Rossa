@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pass: UITextField!
     @IBOutlet weak var loginout: UIButton!
     @IBOutlet weak var registrazione: UIButton!
+    @IBOutlet weak var imageCRI: UIImageView!
     
     var modello=Modello()
     var database=Database()
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginout.layer.cornerRadius = 4
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
